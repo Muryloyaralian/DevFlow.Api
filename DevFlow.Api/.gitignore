@@ -1,0 +1,13 @@
+## Pastas de compilação (Arquivos pesados que o VS gera)
+[Bb]in/
+[Oo]bj/
+
+## Configurações do usuário e cache da IDE
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+## Arquivos de Banco de Dados temporários (se houver)
+*.db-shm
+*.db-wal

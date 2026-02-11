@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+// 1. Pegar a Connection String do appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// 2. Configurar o banco de dados no sistema
+builder.Services.AddDbContext<DevFlow.Api.Data.AppDbContext>(options =>
+    options.UseSqlite(connectionString));
 
 // Add services to the container.
 
